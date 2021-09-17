@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/luckySevenSplash">
+
+    <fragment
+        android:id="@+id/luckySevenSplash"
+        android:name="com.goup.pin.pinaa.app.LuckySevenSplash"
+        android:label="fragment_lucky_seven_splash"
+        tools:layout="@layout/fragment_lucky_seven_splash" >
+        <action
+            android:id="@+id/action_luckySevenSplash_to_luckySevenMain"
+            app:destination="@id/luckySevenMain" />
+    </fragment>
+    <fragment
+        android:id="@+id/luckySevenMain"
+        android:name="com.goup.pin.pinaa.app.LuckySevenMain"
+        android:label="fragment_lucky_seven_main"
+        tools:layout="@layout/fragment_lucky_seven_main" >
+        <action
+            android:id="@+id/action_luckySevenMain_to_luckySevenProfile"
+            app:destination="@id/luckySevenProfile" />
+        <action
+            android:id="@+id/action_luckySevenMain_to_luckySevenView"
+            app:destination="@id/luckySevenView" />
+    </fragment>
+    <fragment
+        android:id="@+id/luckySevenProfile"
+        android:name="com.goup.pin.pinaa.app.LuckySevenProfile"
+        android:label="fragment_lucky_seven_profile"
+        tools:layout="@layout/fragment_lucky_seven_profile" >
+        <action
+            android:id="@+id/action_luckySevenProfile_to_luckySevenMain"
+            app:destination="@id/luckySevenMain" />
+        <action
+            android:id="@+id/action_luckySevenProfile_to_luckySevenView"
+            app:destination="@id/luckySevenView" />
+    </fragment>
+    <fragment
+        android:id="@+id/luckySevenView"
+        android:name="com.goup.pin.pinaa.app.LuckySevenView"
+        android:label="fragment_lucky_seven_view"
+        tools:layout="@layout/fragment_lucky_seven_view" >
+        <action
+            android:id="@+id/action_luckySevenView_to_luckySevenMain"
+            app:destination="@id/luckySevenMain" />
+    </fragment>
+</navigation>
